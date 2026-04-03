@@ -6,6 +6,61 @@
   <title>政府數位轉型與產業輔導專案 — 呂易修</title>
   <meta name="description" content="經濟部、農業部及地方政府數位轉型與產業輔導計畫執行經驗">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .flow-step {
+      flex: 1;
+      min-width: 0;
+      background: var(--color-surface);
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.2rem 0.8rem;
+      text-align: center;
+      cursor: default;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, background 0.25s ease;
+    }
+    .flow-step:hover {
+      border-color: var(--color-accent);
+      box-shadow: 0 6px 20px rgba(74,85,104,0.15);
+      transform: translateY(-3px);
+      background: var(--color-bg-alt);
+    }
+    .flow-step--final {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+    }
+    .flow-step--final:hover {
+      background: var(--color-accent-hover);
+      border-color: var(--color-accent-hover);
+      box-shadow: 0 6px 20px rgba(74,85,104,0.3);
+      transform: translateY(-3px);
+    }
+    .flow-step__num {
+      font-size: 0.68rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+    .flow-step--final .flow-step__num { color: rgba(255,255,255,0.6); }
+    .flow-step__title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--color-text);
+    }
+    .flow-step--final .flow-step__title { color: #fff; }
+    .flow-step__desc {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 0.3rem;
+      line-height: 1.5;
+    }
+    .flow-step--final .flow-step__desc { color: rgba(255,255,255,0.7); }
+    .flow-arrow {
+      flex-shrink: 0;
+      color: #ccc;
+      font-size: 1rem;
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -53,8 +108,7 @@
     <section class="case-section fade-in">
       <h2 class="case-section__title">專案概述</h2>
       <p>
-        擔任行銷企劃期間，參與經濟部、農業部及地方政府數位轉型與產業輔導計畫，
-        負責政府標案企劃、投標簡報、專案執行、跨單位協調與成果結案。
+        於 2–3 人規模的小型團隊中，與負責人共同橫跨經濟部、農業部及地方政府多項數位轉型與產業輔導標案，全程統籌需求分析、投標企劃、多方協調、進度管控至核銷結案，累積主導計畫規模逾 600 萬，輔導農友逾 100 人、商家 236 間。
       </p>
       <div style="display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
         <div>
@@ -66,7 +120,7 @@
           <p style="font-size: 0.9rem; color: var(--color-text-muted);">輔導農友數</p>
         </div>
         <div>
-          <p style="font-size: 2.5rem; font-weight: 700; color: var(--color-accent);">236</p>
+          <p style="font-size: 2.5rem; font-weight: 700; color: var(--color-accent);">236+</p>
           <p style="font-size: 0.9rem; color: var(--color-text-muted);">輔導店家數</p>
         </div>
       </div>
@@ -74,30 +128,79 @@
 
     <!-- Government Tenders -->
     <section class="case-section fade-in">
-      <h2 class="case-section__title">政府標案投標與執行</h2>
-      <ul>
-        <li><strong>111 金山蹦火行銷推廣案</strong>（225 萬）</li>
-        <li><strong>112、113 蘇澳鎮產業聯合行銷及輔導案</strong>（合計 370 萬）</li>
-        <li>負責從企劃撰寫、投標簡報到成果結案之全流程履約</li>
+      <h2 class="case-section__title">政府標案全流程管理</h2>
+      <p>
+        主導標案從需求解讀、企劃撰寫、投標評選，到執行管控、核銷結案的完整履約，統籌跨機關、跨廠商協作，確保進度與品質雙達標。
+      </p>
+      <ul style="margin-top: 1rem;">
+        <li><strong>111 金山蹦火行銷推廣案（225 萬）：</strong>統籌文化策展、主題旅遊送客計畫、媒體踩線及社群行銷，帶動 539 人次參與，全部工作項目均達 KPI；標案所拍攝 4K 紀錄片《點燃希望的漁火》，榮獲休士頓國際影展短片類最高榮譽雷米白金獎。</li>
+        <li><strong>112、113 蘇澳鎮產業聯合行銷及輔導案（合計 370 萬）：</strong>從標案撰寫、評選答辯到全流程履約，統籌輔導 10 家在地特色業者（涵蓋農業、住宿、餐飲、手工藝），為每家客製化輔導方案，包含 LINE OA 建置、線上訂購系統導入及品牌故事製作，委邀《天下雜誌》微笑台灣記者採訪撰寫提升內容品質；另辦理跨縣市產業交流觀摩（帶領 30 名業者赴苗栗標竿學習）、聯合行銷記者會與直播活動，並邀請 3 位 KOL 擴大曝光觸及。</li>
       </ul>
+
+      <!-- 全流程履約流程圖 -->
+      <div style="margin-top: 2rem;">
+        <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-bottom: 1.2rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700;">全流程履約</p>
+        <div style="display: flex; align-items: center; gap: 0.5rem; overflow-x: auto; padding: 0.5rem 0 1rem 0;">
+
+          <div class="flow-step">
+            <div class="flow-step__num">01</div>
+            <div class="flow-step__title">需求分析</div>
+            <div class="flow-step__desc">解讀標案規範<br>確認核心目標</div>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step">
+            <div class="flow-step__num">02</div>
+            <div class="flow-step__title">企劃撰寫</div>
+            <div class="flow-step__desc">策略規劃<br>文件製作</div>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step">
+            <div class="flow-step__num">03</div>
+            <div class="flow-step__title">投標評選</div>
+            <div class="flow-step__desc">評選簡報<br>委員答辯</div>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step">
+            <div class="flow-step__num">04</div>
+            <div class="flow-step__title">跨單位執行</div>
+            <div class="flow-step__desc">跨機關協調<br>進度管控</div>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step flow-step--final">
+            <div class="flow-step__num">05</div>
+            <div class="flow-step__title">成果結案</div>
+            <div class="flow-step__desc">成效彙整<br>核銷報告</div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <!-- Agricultural Digital Transformation -->
     <section class="case-section fade-in">
       <h2 class="case-section__title">農業數位轉型與品牌賦能</h2>
-      <ul>
-        <li><strong>111-113 農業數位基盤星點計畫：</strong>引導超過百名農友運用 LINE OA 及訂購系統建立數位營運基礎</li>
-        <li><strong>112 雲世代農業數位轉型業界參與計畫：</strong>規模 234 萬，主導初級加工場之數位轉型與行銷</li>
+      <ul style="margin-top: 1rem;">
+        <li><strong>111-112 農產品初級加工場推廣計畫 ／ 112 青年農民創新加值計畫：</strong>協助農友與青農建立品牌定位與推廣策略，輔導行銷內容製作與通路開發。</li>
+        <li><strong>111-113 農業數位基盤星點計畫：</strong>規劃並推動農友數位轉型路徑，輔導逾 100 名農友導入 LINE OA 及線上訂購系統，協助建立穩定數位銷售管道，降低對傳統通路依賴。</li>
+        <li><strong>112-113 雲世代農業數位轉型業界參與計畫（234 萬）：</strong>統籌農業初級加工場數位轉型計畫，協調系統建置廠商、輔導顧問與農業單位三方進度，推動品牌行銷策略落地執行。</li>
       </ul>
     </section>
 
     <!-- Commercial District -->
     <section class="case-section fade-in">
       <h2 class="case-section__title">商圈活絡與數位共好</h2>
-      <ul>
-        <li><strong>111 雲世代商圈輔導計畫：</strong>輔導三角湧、淡水商圈共 36 間店家進行數位轉型</li>
-        <li><strong>112 中小企業數位共好計畫：</strong>輔導 200 家小微餐飲業者運用 LINE OA 並導入數位點餐系統</li>
-        <li><strong>111-113 活絡商圈補助計畫：</strong>整合地方商圈組織與店家需求，推進活動規劃、資源協調與宣傳落地</li>
+      <ul style="margin-top: 1rem;">
+        <li><strong>111 雲世代商圈輔導計畫：</strong>管理三角湧、淡水兩大商圈共 36 間店家的數位升級進度，協調商圈組織與各業者需求，推進系統導入與行銷應用。</li>
+        <li><strong>111-113 活絡商圈補助計畫：</strong>整合地方商圈組織與多方業者需求，跨部門協調資源分配，統籌活動規劃、宣傳落地與業者動員。</li>
+        <li><strong>112 中小企業數位共好計畫（200 萬）：</strong>親赴雙北及宜蘭蘇澳，逐一走訪並手把手協助逾 110 家小微餐飲業者導入點餐系統、LINE OA 及 Google 我的商家，輔導完成率達 100%，各店官方帳號好友數均成長逾 100 人。</li>
       </ul>
     </section>
 
@@ -105,14 +208,16 @@
     <section class="case-section fade-in">
       <h2 class="case-section__title">核心技能</h2>
       <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
-        <span class="skill-badge">政府標案</span>
-        <span class="skill-badge">專案管理</span>
-        <span class="skill-badge">跨單位協調</span>
-        <span class="skill-badge">企劃撰寫</span>
-        <span class="skill-badge">投標簡報</span>
-        <span class="skill-badge">成果結案</span>
+        <span class="skill-badge">政府標案全流程管理</span>
+        <span class="skill-badge">跨部門協調</span>
+        <span class="skill-badge">里程碑進度管控</span>
+        <span class="skill-badge">企劃撰寫與投標</span>
+        <span class="skill-badge">成果核銷結案</span>
+        <span class="skill-badge">客製化輔導方案規劃</span>
+        <span class="skill-badge">數位轉型導入</span>
         <span class="skill-badge">LINE OA</span>
-        <span class="skill-badge">數位轉型</span>
+        <span class="skill-badge">點餐系統導入</span>
+        <span class="skill-badge">地方產業輔導</span>
       </div>
     </section>
 
