@@ -206,6 +206,26 @@ function initAutoRedirect() {
   }
 }
 
+// ── Mobile Menu Toggle ───────────────────────────────────────
+function initMobileMenu() {
+  const toggle = document.querySelector('.nav__toggle');
+  const links = document.querySelector('.nav__links');
+  if (!toggle || !links) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    toggle.textContent = isOpen ? '✕' : '☰';
+  });
+
+  // Close menu when a link is tapped
+  links.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.textContent = '☰';
+    });
+  });
+}
+
 // ── Initialize on DOM Ready ───────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   // Typing effect
@@ -225,6 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Nav active state
   initNavActiveState();
+
+  // Mobile menu
+  initMobileMenu();
 
   // Auto-redirect on homepage
   initAutoRedirect();
